@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, flash
-from aplicativo.models import db
+from Projeto_flask_login.aplicativo.models import db
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "minha_key_wilson"
