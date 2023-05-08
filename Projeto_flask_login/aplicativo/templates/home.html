@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style_login.css')}}">
+
+</head>
+<body>
+      <div class="container">
+            <div>
+                <h1> Tela de Login </h1>
+                <form action="/verificar_login" method="post">
+                    <p>Email</p>
+                    <input type="text" name="email" required/><br>
+
+                    <p>Senha</p>
+                    <input type="password" name="senha" required><br>
+
+                  <div id="div_checkbox">
+                      <input type="checkbox" id="checkbox_login" name="checkbox_login">
+                      <label for="checkbox_login">Continuar logado</label><br>
+                  </div>
+
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class="msg">
+                                    {{message}}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                  <button type="submit">Enviar</button>
+                </form>
+                <hr>
+                <form id="register_container" action="/cadastro">
+                    <p class="register"> Ainda não tem conta?</p>
+                    <button type="submit" class="register">Cadastre-se</button>
+                </form>
+            </div>
+      </div>
+
+</body>
+</html>

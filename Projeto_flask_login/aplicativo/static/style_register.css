@@ -1,0 +1,84 @@
+body{
+    font-family:helvetica;
+    overflow:hidden;
+    margin:0;
+}
+
+:root{
+    --cor0:white;
+    --cor1:#2C6FDB; /*Azul*/
+    --cor2:#3F5E8F; /*Azul Escuro*/
+    --cor3:#7CB2DB; /*Azul Claro*/
+    --cor4:#E1E0E1; /*Branco cinza*/
+    --cor5:#EAF9FA; /*Azul bem claro*/
+    --cor6:#23508E; /*Azul mais escuro*/
+}
+
+.container{
+    background-image: linear-gradient(to bottom, var(--cor1), var(--cor2));
+    background-attachment: fixed;
+    background-color:blue;
+    width:100%;
+    height:100vh;
+    display:flex;
+    align-itens:center;
+    justify-content:center;
+}
+
+.container > div{
+    align-self:center;
+    background-color:var(--cor0);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius:2px;
+}
+div > h1{
+    margin:15px 10px;
+    text-align:center;
+    color:var(--cor2);
+}
+
+form{
+    margin:20px 20px;
+}
+
+form > input{
+    border-width:1px;
+    width:300px;
+    height:20px;
+    background-color:white;
+
+}
+
+form > button{
+    border-width:1px;
+    border-radius:5px;
+    margin-top:16px;
+    width:308px;
+    height:30px;
+    background-color:var(--cor2);
+    color:white;
+}
+
+form > button:active{
+    background-color:#12468F;
+    color:withe;
+}
+
+#voltar{
+    width:308px;
+    text-align:center;
+    margin:0px;
+}
+
+form > p{
+    margin: 16px 0px 0px 0px;
+}
+
+hr{
+    margin:0px;
+}
+
+.erro{
+    text-align:center;
+    margin:12px 4px 0px;
+}

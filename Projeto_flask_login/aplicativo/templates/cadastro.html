@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='style_register.css')}}">
+</head>
+<body>
+    <div class="container">
+
+        <div>
+            <h1>Tela de Cadastro</h1>
+            <form class="form_register" action="/verificar" method="post">
+                <p>Informe o seu Email</p>
+                <input type="text" name="email" required>
+
+                <p>Informe o sua Senha</p>
+                <input type="password" name="senha" required>
+                <p>Confirme sua Senha</p>
+                <input type="password" name="conf_senha" required><br>
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="erro">
+                                {{message}}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                <button>Confirmar</button>
+            </form>
+            <hr>
+            <form action="/" class="form_voltar">
+                <button id="voltar" type="submit">Voltar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
