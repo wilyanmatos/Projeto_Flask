@@ -33,7 +33,7 @@ def conectar(var_info=None, desconect=False, register=False, login=False):
         if login:
             email = var_info['email']
             senha = var_info['senha']
-            cursor.execute("select * from usuarios where email = '" + email + "' and " + senha + ";")
+            cursor.execute("select * from usuarios where email = '" + email + "' and senha = " + senha + ";")
             verificador = cursor.fetchone()
             if verificador is None:
                 flash('E-mail não cadastrado')
